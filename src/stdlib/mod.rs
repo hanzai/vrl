@@ -158,6 +158,7 @@ cfg_if::cfg_if! {
         mod parse_ruby_hash;
         mod parse_syslog;
         mod parse_timestamp;
+        mod parse_go_timestamp;
         mod parse_tokens;
         mod parse_url;
         mod parse_user_agent;
@@ -331,6 +332,7 @@ cfg_if::cfg_if! {
         pub use parse_ruby_hash::ParseRubyHash;
         pub use parse_syslog::ParseSyslog;
         pub use parse_timestamp::ParseTimestamp;
+        pub use parse_go_timestamp::ParseGoTimestamp;
         pub use parse_tokens::ParseTokens;
         pub use parse_url::ParseUrl;
         pub use parse_user_agent::ParseUserAgent;
@@ -511,6 +513,7 @@ pub fn all() -> Vec<Box<dyn Function>> {
         Box::new(ParseRubyHash),
         Box::new(ParseSyslog),
         Box::new(ParseTimestamp),
+        Box::new(ParseGoTimestamp),
         Box::new(ParseTokens),
         Box::new(ParseUrl),
         Box::new(ParseUserAgent),

@@ -836,6 +836,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "cvt"
+version = "0.1.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d2ae9bf77fbf2d39ef573205d554d87e86c12f1994e9ea335b0651b9b278bcf1"
+dependencies = [
+ "cfg-if",
+]
+
+[[package]]
 name = "data-encoding"
 version = "2.6.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1163,6 +1172,36 @@ name = "glob"
 version = "0.3.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d2fabcfbdc87f4758337ca535fb41a6d701b65693ce38287d856d1674551ec9b"
+
+[[package]]
+name = "gostd_builtin"
+version = "1.0.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "22d3e205fe025bf1a1e8ab95e45c6bfa00aa42aa71d31cdb479b275808266a77"
+
+[[package]]
+name = "gostd_derive"
+version = "0.0.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "7ed1713fbbe002f018944a47c31ded81705b30a5b20251b7f559acef2c31e209"
+dependencies = [
+ "quote",
+ "syn 1.0.109",
+]
+
+[[package]]
+name = "gostd_time"
+version = "1.1.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "3e747ac0e4cc8881c93acdfc8cb776c13874da97bed12a9548f0d2b21c9c7536"
+dependencies = [
+ "cvt",
+ "gostd_builtin",
+ "gostd_derive",
+ "lazy_static",
+ "libc",
+ "winapi",
+]
 
 [[package]]
 name = "grok"
@@ -3417,6 +3456,7 @@ dependencies = [
  "dyn-clone",
  "exitcode",
  "flate2",
+ "gostd_time",
  "grok",
  "hex",
  "hmac",
